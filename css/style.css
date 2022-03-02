@@ -6,6 +6,7 @@ and make our code better */
     padding: 0;
 }
 body{
+    font-family: "Roboto Mono", monospace; 
     position: fixed;
     top: 0;
     bottom: 0;
@@ -15,15 +16,123 @@ body{
 html{
     font-size: 62.5%;
 }
+:root{
+    --orange: #f54201;
+    --light-blue: #004181;
+    --blue: #003468;
+    --yellow: #f7a702;
+    --white: #fefefe;
+}
 /* Design */
 a{
     text-decoration: none;
     display: inline;
     color: black;
 }
+/* HEADER STYLES */
 header{
     width: 100%;
-    height: 140px;
+    height: 110px;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 50px auto;
+}
+header .header-icons-container{
+    width: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--blue);
+}
+header .icons{
+    margin-right: 50px;
+}
+header .icons span::before{
+    color: white;
+    font-size: 28px;
+}
+header .icons a{
+    margin-left: 10px;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(0, 0, 0, 0.158);     
+}
+nav .nav-logo-container{
+    display:flex;
+    align-items: center;
+    margin-left: 50px;
+    height:100%;
+}
+nav .nav-logo-container img{
+    width: 210px;
+    height: 60px;
+    object-fit: cover;
+}
+nav .profile-link{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;;
+}
+nav .profile-link a{
+    
+    color: black;
+    border-bottom: 1px solid black;
+}
+/* Main design */
+main{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://wallpaper.dog/large/5565243.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    
+}
+main .main-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+main h1{
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    line-height: 4.2rem;
+    color: var(--white);
+    align-self: center;
+    justify-self: center;
+    width: 700px;
+    height: auto;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Roboto Mono', monospace;
+}
+main .main-button-container{
+    display: flex;
+    justify-content: center;
+}
+main button{
+    width: 100px;
+    height: 40px;
+    background-color: var(--blue);
+    cursor: pointer;
+    border: none;
+    box-shadow: -14px 12px 30px 0px rgba(0,0,0,0.68);
+    border: 1px solid rgba(0, 0, 0, 0.158);
+}
+main button a{
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
 }
