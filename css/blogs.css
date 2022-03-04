@@ -92,23 +92,24 @@ main .main-blog-container{
     padding: 30px 100px;
     background-color: var(--blue);
     color: var(--white);
-    row-gap: 20px; 
 }
 main .main-blog-container--noticias{
     grid-area: 1 / 1 / 2 / 3;
     font-size: 1.8rem;
 }
 .main-blog-container--img{
-    width: 70%;
-    height: 100%;
+    display: flex;
+    align-items:center;
+    /* width: 100%;
+    height: 100%; */
 }
 .main-blog-container--img img{
-    
-    height:90%;
+    width: 80%;
+    min-width: 360px;
     object-fit: cover;
 }
 .main-blog-container--article{
-    padding: 20px 50px;
+    padding: 20px;
 }
 .main-blog-container--article h2{
     font-size: 1.8rem;
@@ -123,6 +124,13 @@ main .main-blog-container--noticias{
     background-color: var(--blue);
     color: var(--white);
     border: 1px solid var(--white);
+    cursor: pointer;
+}
+.main-blog-container--article button:hover{
+    background-color: var(--white);
+    border: none;
+    color: black;
+    font-weight: bold;  
 }
 /* Second section */
 .main-blogs-container{
